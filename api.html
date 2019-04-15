@@ -25,12 +25,12 @@ document.getElementById("text").onclick = function() {
 </script>
 <script type="text/javascript">
 document.getElementById("text2").onclick = function() {
-    const startTime = performance.now(); // 開始時間
+    const startTime = performance.now();
     document.getElementById('text2').innerHTML = '<img src="images/image.jpg?aws=true" alt="TestImage">';
-    const endTime = performance.now(); // 終了時間
-    var cTimer = endTime - startTime;
-    BOOMR.sendTimer("customTimer", cTimer);
-    console.log(cTimer); // 何ミリ秒かかったかを表示する
+    const endTime = performance.now();
+    var cTimer = 1000 * (endTime - startTime);
+    BOOMR.sendTimer("heroimage", cTimer);
+    console.log(cTimer);
 };
 </script>
 </html>
